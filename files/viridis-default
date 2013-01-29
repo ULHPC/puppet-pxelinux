@@ -1,0 +1,6 @@
+DEFAULT boot
+LABEL boot
+     kernel /vmlinuz-3.5.0-17-highbank
+     append console=ttyAMA0 iscsiclient=viridis-0 iscsitarget=iqn.2013-01.com.iscsi-test.target0:viridis-0 iscsiserver=10.226.251.11
+     ipappend 3
+     initrd /initrd-iscsi.img-3.5.0-17-highbank

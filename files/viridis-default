@@ -7,7 +7,8 @@
 
 DEFAULT boot
 LABEL boot
-     kernel /custom/vmlinuz-3.5.0-22-highbank
+     kernel /vmlinuz
      append console=ttyAMA0 iscsitarget=iqn.2013-01.com.iscsi-test.target0 iscsiserver=10.226.251.11
      ipappend 3
-     initrd /custom/initrd.img-3.5.0-22-highbank-custom.gz
+     initrd /initrd.img.gz
+

@@ -82,28 +82,29 @@ class pxelinux::common {
     }
 
 
-    file { "root_dir_${pxelinux::root_dir}":
-        ensure => 'directory',
-        path   => "${pxelinux::root_dir}",
-        owner  => "${pxelinux::params::pxe_owner}",
-        group  => "${pxelinux::params::pxe_group}",
-        mode   => "${pxelinux::params::pxe_mode}",
+    if (! defined(File[$pxelinux::root_dir])) {
+      file { "${pxelinux::root_dir}":
+          ensure => 'directory',
+          path   => "${pxelinux::root_dir}",
+          owner  => "${pxelinux::params::pxe_owner}",
+          group  => "${pxelinux::params::pxe_group}",
+          mode   => "${pxelinux::params::pxe_mode}",
+      }
+      File[$pxelinux::root_dir] -> File["${pxelinux::root_dir}/pxelinux.cfg"] -> Exec['hardlink_pxelinux.0']
     }
+
     file { "${pxelinux::root_dir}/pxelinux.cfg":
         ensure => 'directory',
         owner  => "${pxelinux::params::pxe_owner}",
         group  => "${pxelinux::params::pxe_group}",
         mode   => "${pxelinux::params::pxe_mode}",
-        require => File["root_dir_${pxelinux::root_dir}"]
     }
     exec { 'hardlink_pxelinux.0':
         command => "ln ${pxelinux::params::pxelinux_file} ${pxelinux::root_dir}/pxelinux.0",
         path    => '/usr/bin:/bin:/sbin',
         creates => "${pxelinux::root_dir}/pxelinux.0",
         user    => "${pxelinux::params::pxe_owner}",
-        require => [ Package['pxelinux'],
-                     File["root_dir_${pxelinux::root_dir}"]
-                   ]
+        require => Package['pxelinux'],
     }
 
     if ($source != '')

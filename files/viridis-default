@@ -8,7 +8,7 @@
 DEFAULT boot
 LABEL boot
      kernel /vmlinuz
-     append console=ttyAMA0 iscsitarget=iqn.2013-01.com.iscsi-test.target0 iscsiserver=10.226.251.11
+     append console=ttyAMA0 iscsitarget=iqn.2013-01.com.iscsi-test.target0 iscsiserver=10.226.251.14
      ipappend 3
      initrd /initrd.img.gz
 

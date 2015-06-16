@@ -1,6 +1,6 @@
 {
   "name": "ULHPC/pxelinux",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "S. Varrette, H. Cartiaux, V. Plugaru, S. Diehl aka. UL HPC Management Team",
   "mail": "hpc-sysadmins@uni.lu",
   "summary": "Set-up pxelinux in a directory, ready to be exported via tftp",

@@ -15,7 +15,7 @@
 
 include 'pxelinux::params'
 
-$names = ["ensure", "protocol", "port", "packagename"]
+$names = ['ensure', 'protocol', 'port', 'packagename']
 
 notice("pxelinux::params::ensure = ${pxelinux::params::ensure}")
 notice("pxelinux::params::protocol = ${pxelinux::params::protocol}")

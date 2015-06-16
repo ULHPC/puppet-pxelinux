@@ -16,5 +16,9 @@
 #      sudo puppet apply -t /vagrant/tests/init.pp
 #
 node default {
-    include pxelinux
+  class { 'pxelinux':
+      ensure    => present,
+      source    => 'puppet:///modules/pxelinux/viridis-default',
+      root_dir  => '/srv/tftp'
+  }
 }

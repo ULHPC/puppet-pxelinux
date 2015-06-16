@@ -30,9 +30,9 @@ class pxelinux::params {
     ###########################################
 
     # ensure the presence (or absence) of pxelinux
-    $ensure = $pxelinux_ensure ? {
+    $ensure = $::pxelinux_ensure ? {
         ''      => 'present',
-        default => "${pxelinux_ensure}"
+        default => $::pxelinux_ensure
     }
 
     #### MODULE INTERNAL VARIABLES  #########

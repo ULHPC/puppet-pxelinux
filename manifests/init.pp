@@ -60,7 +60,7 @@ inherits pxelinux::params
         debian, ubuntu:         { include pxelinux::common::debian }
         redhat, fedora, centos: { include pxelinux::common::redhat }
         default: {
-            fail("Module $module_name is not supported on $operatingsystem")
+            fail("Module ${module_name} is not supported on ${::operatingsystem}")
         }
     }
 }

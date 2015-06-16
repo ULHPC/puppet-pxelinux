@@ -17,8 +17,8 @@
 #
 node default {
   class { 'pxelinux':
-      ensure    => present,
-      source    => 'puppet:///modules/pxelinux/viridis-default',
-      root_dir  => '/srv/tftp'
+      ensure   => present,
+      source   => 'puppet:///modules/pxelinux/viridis-default',
+      root_dir => '/srv/tftp'
   }
 }

@@ -45,7 +45,7 @@ class pxelinux::common {
         require => Package['pxelinux'],
     }
 
-    if ($source != '')
+    if ($pxelinux::source != '')
     {
         file { 'pxelinux.conf':
             ensure  => "${pxelinux::ensure}",

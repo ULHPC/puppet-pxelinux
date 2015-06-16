@@ -15,12 +15,16 @@
 
 include 'pxelinux::params'
 
-$names = ['ensure', 'protocol', 'port', 'packagename']
+$names = ['ensure', 'packagename', 'root_dir', 'pxelinux_file', 'config_file', 'pxe_mode', 'pxe_owner', 'pxe_group']
 
 notice("pxelinux::params::ensure = ${pxelinux::params::ensure}")
-notice("pxelinux::params::protocol = ${pxelinux::params::protocol}")
-notice("pxelinux::params::port = ${pxelinux::params::port}")
 notice("pxelinux::params::packagename = ${pxelinux::params::packagename}")
+notice("pxelinux::params::root_dir = ${pxelinux::params::root_dir}")
+notice("pxelinux::params::pxelinux_file = ${pxelinux::params::pxelinux_file}")
+notice("pxelinux::params::config_file = ${pxelinux::params::config_file}")
+notice("pxelinux::params::pxe_mode = ${pxelinux::params::pxe_mode}")
+notice("pxelinux::params::pxe_owner = ${pxelinux::params::pxe_owner}")
+notice("pxelinux::params::pxe_group = ${pxelinux::params::pxe_group}")
 
 #each($names) |$v| {
 #    $var = "pxelinux::params::${v}"

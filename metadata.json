@@ -34,9 +34,9 @@
   "classes": [
     "pxelinux",
     "pxelinux::common",
-    "pxelinux::debian",
-    "pxelinux::params",
-    "pxelinux::redhat"
+    "pxelinux::common::debian",
+    "pxelinux::common::redhat",
+    "pxelinux::params"
   ],
   "definitions": [
 

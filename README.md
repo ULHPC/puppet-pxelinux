@@ -7,7 +7,7 @@
 ![Supported Platforms](http://img.shields.io/badge/platform-debian-lightgrey.svg)
 [![Documentation Status](https://readthedocs.org/projects/ulhpc-puppet-pxelinux/badge/?version=latest)](https://readthedocs.org/projects/ulhpc-puppet-pxelinux/?badge=latest)
 
-Configure and manage pxelinux
+Set-up pxelinux in a directory, ready to be exported via tftp
 
       Copyright (c) 2015 S. Varrette, H. Cartiaux, V. Plugaru, S. Diehl aka. UL HPC Management Team <hpc-sysadmins@uni.lu>
       
@@ -16,7 +16,7 @@ Configure and manage pxelinux
 
 ## Synopsis
 
-Configure and manage pxelinux.
+Set-up pxelinux in a directory, ready to be exported via tftp.
 
 This module implements the following elements: 
 

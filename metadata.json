@@ -1,0 +1,44 @@
+{
+  "name": "ULHPC/pxelinux",
+  "version": "0.0.2",
+  "author": "S. Varrette, H. Cartiaux, V. Plugaru, S. Diehl aka. UL HPC Management Team",
+  "mail": "hpc-sysadmins@uni.lu",
+  "summary": "Set-up pxelinux in a directory, ready to be exported via tftp",
+  "description": "Set-up pxelinux in a directory, ready to be exported via tftp",
+  "license": "GPL-3.0",
+  "source": "https://github.com/ULHPC/puppet-pxelinux",
+  "docs_project": "ulhpc-puppet-pxelinux",
+  "project_page": "https://github.com/ULHPC/puppet-pxelinux",
+  "issues_url": "https://github.com/ULHPC/puppet-pxelinux/issues",
+  "forge_url": "https://forge.puppetlabs.com/ULHPC/pxelinux",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">=4.2.2 <5.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    }
+  ],
+  "tags": [
+    "pxelinux",
+    "pxe",
+    "netboot"
+  ],
+  "classes": [
+    "pxelinux",
+    "pxelinux::common",
+    "pxelinux::common::debian",
+    "pxelinux::common::redhat",
+    "pxelinux::params"
+  ],
+  "definitions": [
+
+  ]
+}

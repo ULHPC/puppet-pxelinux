@@ -13,7 +13,7 @@
 
 
 -----------
-The [ULHPC/pxelinux](https://github.com/ULHPC/puppet-pxelinux) puppet module has been designed to configure and manage pxelinux
+The [ULHPC/pxelinux](https://github.com/ULHPC/puppet-pxelinux) puppet module has been designed to set-up pxelinux in a directory, ready to be exported via tftp
 
 This is the main page of the documentation for this Puppet module, which is hosted and managed by [Read the Docs](http://ulhpc-pxelinux.readthedocs.org/en/latest/).
 It proposes to detail the following elements:

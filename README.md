@@ -21,6 +21,11 @@ Configure and manage pxelinux.
 This module implements the following elements: 
 
 * __Puppet classes__:
+    - `pxelinux` 
+    - `pxelinux::common` 
+    - `pxelinux::debian` 
+    - `pxelinux::params` 
+    - `pxelinux::redhat` 
 
 * __Puppet definitions__: 
 
@@ -51,6 +56,12 @@ Use it as follows:
 
 See also [`tests/init.pp`](tests/init.pp)
 
+### Class `pxelinux::debian`
+
+See [`tests/debian.pp`](tests/debian.pp)
+### Class `pxelinux::redhat`
+
+See [`tests/redhat.pp`](tests/redhat.pp)
 
 
 ## Librarian-Puppet / R10K Setup
